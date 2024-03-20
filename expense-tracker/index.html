@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h1>Expense Tracker</h1> -->
+    <div class="dashboard">
+      <!-- <div class="profile"> -->
+        <!-- Add profile picture here -->
+        <img src="profile.png" alt="Profile Picture" class="profile-pic">
+        <!-- Add name or username here -->
+        <h2 class="profile-name">Your Name</h2>
+    <!-- </div> -->
+      <nav class="dashboard-nav">
+          <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="transaction.html">View Transactions</a></li>
+              <li><a href="income.html">View Income</a></li>
+              <li><a href="expense.html">View Expenses</a></li>
+          </ul>
+      </nav>
+    </div>
+    <main>
+      <h1>Expense Tracker</h1>
+      <header>
+        <div>
+          <h5>Total Balance</h5>
+          <span id="balance">$0.00</span>
+        </div>
+        <div>
+          <h5>Income</h5>
+          <span id="income">$0.00</span>
+        </div>
+        <div>
+          <h5>Expense</h5>
+          <span id="expense">$0.00</span>
+        </div>
+      </header>
+      <section>
+        <h3>Add Transaction</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Expense</span>
+                <span>Income</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" required />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="transactions">
+      <section>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
