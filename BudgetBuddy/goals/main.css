@@ -1,0 +1,147 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  /* display: flexbox; */
+  /* align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  background: #97BC62FF;
+  margin-left: 100px;
+  margin-top:-50px
+}
+::selection {
+  color: #fff;
+  background: #17a2b8;
+}
+#one{
+  transition: all 0.5s ease;
+}
+.wrapper {
+  display: flexbox;
+  margin-top: 120px;
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 40px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+}
+header p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 30px;
+  margin-top: 10px;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+.field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 19px;
+  margin-left: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #999;
+  /* -moz-appearance: textfield; */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: #ddd;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  /* left: 0; */
+  /* right: 25%; */
+  position: absolute;
+  border-radius: 5px;
+  /* background: #17a2b8; */
+  background-color: #17a2b8;
+  background: #17a2b8;
+}
+.range-input {
+  position: relative;
+  margin-bottom: 25px;;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+}
+input[type="range"] {
+  /* Remove min and max */
+  appearance: none;
+  background: none;
+  width: 100%;
+}
+input[type="range"]::-webkit-slider-thumb {
+  /* Customize thumb appearance */
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #2C5F2D;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  /* Customize thumb appearance */
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #2C5F2D;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* CSS */
+.price-input .field {
+  position: relative;
+}
+
+.price-input .field span {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px; /* Adjust font size as needed */
+  color: #666; /* Adjust color as needed */
+}
